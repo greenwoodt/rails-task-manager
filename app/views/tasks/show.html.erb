@@ -1,0 +1,19 @@
+<%= link_to "Head back to home page", tasks_path %>
+<p>----------------------------</p>
+<h1>SHOW PAGE</h1>
+<h2><%= @task.id %></h2>
+<p><%= @task.title %></p>
+<p><%= @task.details %></p>
+<p><%= @task.completed %></p>
+<p>----------------------------</p>
+<%= link_to "Edit a task",
+  edit_task_path %>
+<p>----------------------------</p>
+<p>----------------------------</p>
+<%= link_to "Create a new task!",
+  new_task_path %>
+<p>----------------------------</p>
+<%= link_to "Delete Task!",
+  task_path(@task),
+  data: {turbo_method: :delete, turbo_confirm: "Are you REALLY sure? :S"}
+%>
